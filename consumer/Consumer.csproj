@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- RabbitMQ -->
+    <PackageReference Include="RabbitMQ.Client" Version="6.4.0" />
+    <!-- Para JSON -->
+    <PackageReference Include="System.Text.Json" Version="7.0.0" />
+    <!-- Para ADO.NET SQL Server -->
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.0" />
+  </ItemGroup>
+
+</Project>

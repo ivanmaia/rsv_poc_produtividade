@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  rabbitmq-poc:
+    image: rabbitmq:3.11-management
+    container_name: rabbitmq-poc
+    ports:
+      - "5672:5672"    # Porta padrão para conexões de mensagens
+      - "15672:15672"  # Porta para acessar o Management (UI via browser)
+    environment:
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+
+  sqlserver-poc:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver-poc
+    ports:
+      - "1433:1433"    # Porta padrão do SQL Server
+    environment:
+      SA_PASSWORD: "YourStrong@Passw0rd"
+      ACCEPT_EULA: "Y"
